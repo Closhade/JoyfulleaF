@@ -81,6 +81,18 @@
                 <p>Цена: 1000 руб.</p>
                 <button onclick="addToCart('Товар 10', '1000 руб.', event)">Добавить в корзину</button>
             </div>
+            <div class="product" data-title="Товар 11" data-description="Полное описание товара 11" data-image="https://via.placeholder.com/150" data-price="1100 руб.">
+                <img src="https://via.placeholder.com/150" alt="Product Image">
+                <h3>Товар 11</h3>
+                <p>Цена: 1100 руб.</p>
+                <button onclick="addToCart('Товар 11', '1100 руб.', event)">Добавить в корзину</button>
+            </div>
+            <div class="product" data-title="Товар 12" data-description="Полное описание товара 12" data-image="https://via.placeholder.com/150" data-price="1200 руб.">
+                <img src="https://via.placeholder.com/150" alt="Product Image">
+                <h3>Товар 12</h3>
+                <p>Цена: 1200 руб.</p>
+                <button onclick="addToCart('Товар 12', '1200 руб.', event)">Добавить в корзину</button>
+            </div>
         </section>
         <section id="cart">
             <h2>Корзина</h2>
@@ -96,7 +108,7 @@
             <h3 id="product-modal-title"></h3>
             <p id="product-modal-description"></p>
             <p id="product-modal-price"></p>
-            <button id="product-modal-add-to-cart" onclick="addToCartFromModal()">Добавить в корзину</button>
+            <button id="product-modal-add-to-cart">Добавить в корзину</button>
         </div>
     </div>
     <script src="script.js"></script>
