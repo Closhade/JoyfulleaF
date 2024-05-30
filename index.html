@@ -6,6 +6,9 @@
     <title>JoyfulleaF</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,7 +19,7 @@
             <input type="text" id="contact-info" class="contact-input" placeholder="Введите ваш контактный номер">
         </div>
         <section id="products">
-            <h2>Всё для мини-стройки</h2>
+            <h2>ВСЁ ДЛЯ МИНИ-СТРОЙКИ</h2>
             <div class="product">
                 <img src="https://via.placeholder.com/150" alt="Product Image">
                 <h3>---</h3>
@@ -75,6 +78,18 @@
                 <img src="https://via.placeholder.com/150" alt="Product Image">
                 <h3>---</h3>
                 <p>Цена: 1000 руб.</p>
+                <button onclick="addToCart('---')">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product Image">
+                <h3>---</h3>
+                <p>Цена: 1100 руб.</p>
+                <button onclick="addToCart('---')">Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product Image">
+                <h3>---</h3>
+                <p>Цена: 1200 руб.</p>
                 <button onclick="addToCart('---')">Добавить в корзину</button>
             </div>
         </section>
