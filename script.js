@@ -61,21 +61,18 @@ function showProductDetails(title, description, imageUrl, price) {
     document.getElementById('product-modal-image').src = imageUrl;
     document.getElementById('product-modal-price').textContent = price;
     document.getElementById('product-modal').style.display = 'block';
-    document.getElementById('product-modal-add-to-cart').onclick = function() {
-        addToCartFromModal(title, price);
-    };
     document.getElementById('product-modal-wishlist').onclick = function() {
-        addToWishlist(title);
+        addToWishlist(title, price);
     };
 }
 
-function addToCartFromModal(title, price) {
-    addToCart(title, price);
-    closeProductDetails();
-}
-
-function addToWishlist(title) {
-    alert(`${title} добавлен в желаемое!`);
+function addToWishlist(title, price) {
+    const wishlistButton = document.getElementById('product-modal-wishlist');
+    wishlistButton.classList.toggle('active');
+    const wishlistItems = document.getElementById('wishlist-items');
+    const itemElement = document.createElement('p');
+    itemElement.textContent = `${title} - ${price}`;
+    wishlistItems.appendChild(itemElement);
 }
 
 function closeProductDetails() {
