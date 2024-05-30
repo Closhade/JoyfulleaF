@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #343a40;
-    color: silver;
+    color: white;
     padding: 15px 0;
     text-align: center;
     font-size: 24px;
@@ -57,7 +57,7 @@ section {
     gap: 10px;
 }
 
-.product {
+.product, .wishlist-item {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -68,19 +68,19 @@ section {
     position: relative;
 }
 
-.product img {
+.product img, .wishlist-item img {
     max-width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
     margin-bottom: 5px;
 }
 
-.product h3 {
+.product h3, .wishlist-item h3 {
     font-size: 16px;
     margin: 10px 0;
 }
 
-.product p {
+.product p, .wishlist-item p {
     font-size: 14px;
     color: #28a745;
     margin-bottom: 10px;
