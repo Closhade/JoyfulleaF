@@ -76,4 +76,8 @@ window.onload = function() {
     if (user && user.username) {
         document.getElementById('contact-info').value = user.username;
     }
+    // Проверяем, что все товары загружены
+    const products = document.querySelectorAll('.product');
+    console.log(`Количество загруженных товаров: ${products.length}`);
+    products.forEach(product => console.log(product));
 };
