@@ -1,4 +1,4 @@
-const botToken = '7466941934:AAHmFBQ-JijsQ6xhpqdZEWdeJJf8SihzQKw'; // токен вашего нового бота
+const botToken = '7466941934:AAHmFBQ-JijsQ6xhpqdZEWdeJJf8SihzQKw'; // токен вашего бота для уведомлений
 const chatId = '431419402'; // ваш Telegram user ID
 
 function addToCart(item) {
