@@ -3,10 +3,11 @@ const chatId = '431419402'; // ваш Telegram user ID
 
 Telegram.WebApp.ready();
 
-function addToCart(item) {
+function addToCart(item, price, event) {
+    event.stopPropagation();
     const cartItems = document.getElementById('cart-items');
     const itemElement = document.createElement('p');
-    itemElement.textContent = `${item} добавлен в корзину`;
+    itemElement.textContent = `${item} - ${price} добавлен в корзину`;
     cartItems.appendChild(itemElement);
 }
 
@@ -52,6 +53,22 @@ function checkout() {
     alert('Ваш заказ принят! Мы свяжемся с вами для подтверждения.');
     document.getElementById('cart-items').innerHTML = '';
     document.getElementById('contact-info').value = '';
+}
+
+function showProductDetails(title, description, imageUrl, price) {
+    document.getElementById('product-modal-title').textContent = title;
+    document.getElementById('product-modal-description').textContent = description;
+    document.getElementById('product-modal-image').src = imageUrl;
+    document.getElementById('product-modal-price').textContent = price;
+    document.getElementById('product-modal').style.display = 'block';
+    document.getElementById('product-modal-add-to-cart').onclick = function() {
+        addToCart(title, price);
+        closeProductDetails();
+    };
+}
+
+function closeProductDetails() {
+    document.getElementById('product-modal').style.display = 'none';
 }
 
 window.onload = function() {
