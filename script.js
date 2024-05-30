@@ -13,7 +13,7 @@ function sendOrderNotification(contactInfo) {
         .map(item => item.textContent)
         .join(', ');
 
-    const message = `Новый заказ от ${contactInfo}: ${items}`;
+    const message = `Новый заказ от ${contactInfo}: ${items}\n\nНаписать клиенту: https://t.me/${contactInfo}`;
     
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
