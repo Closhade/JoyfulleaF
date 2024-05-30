@@ -39,16 +39,16 @@ main {
     border-color: #007bff;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-#products h2 {
+.section-title {
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 30px;
     font-size: 24px;
+}
+
+section {
+    margin-bottom: 20px;
 }
 
 #products {
