@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Кирпичиков</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать в магазин JoyfulleaF</h1>
+    <p>Выберите товар:</p>
+    <button onclick="addToCart('Мини-кирпичи на мини-палетах')">Мини-кирпичи на мини-палетах - 100 руб.</button>
+    <div id="cart"></div>
+    <script>
+        function addToCart(item) {
+            document.getElementById('cart').innerHTML += `<p>${item} добавлен в корзину</p>`;
+        }
+
+        Telegram.WebApp.ready();
+    </script>
+</body>
+</html>
