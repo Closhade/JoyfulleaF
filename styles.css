@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
@@ -39,6 +41,14 @@ main {
 
 section {
     margin-bottom: 20px;
+}
+
+#products h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
 #products {
