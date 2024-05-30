@@ -1,5 +1,5 @@
-const botToken = '7459974548:AAHWT5V__M1LGHauDtFxf3Q0-c5Bx8ndaHQ'; // токен вашего бота
-const chatId = '@Closhade'; // ваш Telegram username
+const botToken = '7466941934:AAHmFBQ-JijsQ6xhpqdZEWdeJJf8SihzQKw'; 
+const chatId = 't.me/Closhade'; // ваш Telegram username
 
 function addToCart(item) {
     const cartItems = document.getElementById('cart-items');
@@ -12,7 +12,7 @@ function sendOrderNotification() {
     const items = Array.from(document.getElementById('cart-items').children)
         .map(item => item.textContent)
         .join(', ');
-    
+
     const message = `Новый заказ: ${items}`;
     
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
