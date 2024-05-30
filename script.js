@@ -58,7 +58,5 @@ window.onload = function() {
     const user = Telegram.WebApp.initDataUnsafe.user;
     if (user && user.username) {
         document.getElementById('contact-info').value = user.username;
-    } else {
-        document.getElementById('contact-info').value = "Введите ваш контактный номер";
     }
 };
