@@ -116,7 +116,7 @@ button:hover {
     background-color: #218838;
 }
 
-#cart-items {
+#cart-items, #wishlist-items {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -174,6 +174,10 @@ button:hover {
     border: none;
     color: #e0245e;
     cursor: pointer;
+    transition: color 0.3s;
+}
+.wishlist-button.active {
+    color: #ff0000;
 }
 .wishlist-button:hover {
     color: #c81e4a;
