@@ -53,15 +53,15 @@ section {
 
 #products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
 }
 
 .product {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -72,25 +72,25 @@ section {
     max-width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .product h3 {
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0;
 }
 
 .product p {
-    font-size: 16px;
+    font-size: 14px;
     color: #28a745;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -104,11 +104,11 @@ button:hover {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s;
 }
 
