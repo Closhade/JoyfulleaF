@@ -1,5 +1,5 @@
 const botToken = '7466941934:AAHmFBQ-JijsQ6xhpqdZEWdeJJf8SihzQKw'; // токен вашего нового бота
-const chatId = 't.me/Closhade'; // ваш Telegram user ID
+const chatId = '@Closhade'; // ваш Telegram user ID
 
 function addToCart(item) {
     const cartItems = document.getElementById('cart-items');
