@@ -76,6 +76,18 @@ window.onload = function() {
     if (user && user.username) {
         document.getElementById('contact-info').value = user.username;
     }
+
+    // Добавляем обработчики событий для каждого товара
+    document.querySelectorAll('.product').forEach(product => {
+        product.addEventListener('click', function() {
+            const title = this.dataset.title;
+            const description = this.dataset.description;
+            const imageUrl = this.dataset.image;
+            const price = this.dataset.price;
+            showProductDetails(title, description, imageUrl, price);
+        });
+    });
+
     // Проверяем, что все товары загружены
     const products = document.querySelectorAll('.product');
     console.log(`Количество загруженных товаров: ${products.length}`);
