@@ -64,11 +64,18 @@ function showProductDetails(title, description, imageUrl, price) {
     document.getElementById('product-modal-add-to-cart').onclick = function() {
         addToCartFromModal(title, price);
     };
+    document.getElementById('product-modal-wishlist').onclick = function() {
+        addToWishlist(title);
+    };
 }
 
 function addToCartFromModal(title, price) {
     addToCart(title, price);
     closeProductDetails();
+}
+
+function addToWishlist(title) {
+    alert(`${title} добавлен в желаемое!`);
 }
 
 function closeProductDetails() {
