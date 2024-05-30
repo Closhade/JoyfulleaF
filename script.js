@@ -62,16 +62,31 @@ function showProductDetails(title, description, imageUrl, price) {
     document.getElementById('product-modal-price').textContent = price;
     document.getElementById('product-modal').style.display = 'block';
     document.getElementById('product-modal-wishlist').onclick = function() {
-        addToWishlist(title, price);
+        addToWishlist(title, description, imageUrl, price);
     };
 }
 
-function addToWishlist(title, price) {
+function addToWishlist(title, description, imageUrl, price) {
     const wishlistButton = document.getElementById('product-modal-wishlist');
     wishlistButton.classList.toggle('active');
     const wishlistItems = document.getElementById('wishlist-items');
-    const itemElement = document.createElement('p');
-    itemElement.textContent = `${title} - ${price}`;
+    const itemElement = document.createElement('div');
+    itemElement.classList.add('wishlist-item');
+    itemElement.setAttribute('data-title', title);
+    itemElement.setAttribute('data-description', description);
+    itemElement.setAttribute('data-image', imageUrl);
+    itemElement.setAttribute('data-price', price);
+
+    itemElement.innerHTML = `
+        <img src="${imageUrl}" alt="${title}">
+        <h3>${title}</h3>
+        <p>${price}</p>
+    `;
+
+    itemElement.onclick = function() {
+        showProductDetails(title, description, imageUrl, price);
+    };
+
     wishlistItems.appendChild(itemElement);
 }
 
