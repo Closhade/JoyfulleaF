@@ -1,5 +1,5 @@
 const botToken = '7466941934:AAHmFBQ-JijsQ6xhpqdZEWdeJJf8SihzQKw'; // токен вашего нового бота
-const chatId = '@Closhade'; // ваш Telegram user ID
+const chatId = '431419402'; // ваш Telegram user ID
 
 function addToCart(item) {
     const cartItems = document.getElementById('cart-items');
@@ -24,7 +24,16 @@ function sendOrderNotification() {
             chat_id: chatId,
             text: message
         })
-    });
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.ok) {
+            console.log('Сообщение успешно отправлено');
+        } else {
+            console.error('Ошибка при отправке сообщения', data);
+        }
+    })
+    .catch(error => console.error('Ошибка:', error));
 }
 
 function checkout() {
