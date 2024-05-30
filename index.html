@@ -12,6 +12,9 @@
         <h1>JoyfulleaF</h1>
     </header>
     <main>
+        <div class="contact-container">
+            <input type="text" id="contact-info" class="contact-input" placeholder="Введите ваш контактный номер">
+        </div>
         <section id="products">
             <h2>Всё для мини-стройки</h2>
             <div class="product">
@@ -24,8 +27,7 @@
         <section id="cart">
             <h2>Корзина</h2>
             <div id="cart-items"></div>
-            <input type="text" id="contact-info" placeholder="Введите ваш контактный номер">
-            <button onclick="checkout()">Оформить заказ</button>
+            <button class="checkout-button" onclick="checkout()">Оформить заказ</button>
         </section>
     </main>
     <script src="script.js"></script>
