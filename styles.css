@@ -16,6 +16,25 @@ main {
     padding: 20px;
 }
 
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: #45a049;
+}
+
 section {
     margin-bottom: 20px;
 }
@@ -38,6 +57,20 @@ button {
 }
 
 button:hover {
+    background-color: #45a049;
+}
+
+.checkout-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.checkout-button:hover {
     background-color: #45a049;
 }
 
