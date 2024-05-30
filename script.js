@@ -8,12 +8,12 @@ function addToCart(item) {
     cartItems.appendChild(itemElement);
 }
 
-function sendOrderNotification() {
+function sendOrderNotification(contactInfo) {
     const items = Array.from(document.getElementById('cart-items').children)
         .map(item => item.textContent)
         .join(', ');
 
-    const message = `Новый заказ: ${items}`;
+    const message = `Новый заказ от ${contactInfo}: ${items}`;
     
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
@@ -41,9 +41,15 @@ function sendOrderNotification() {
 }
 
 function checkout() {
-    sendOrderNotification();
+    const contactInfo = document.getElementById('contact-info').value;
+    if (!contactInfo) {
+        alert('Пожалуйста, введите ваш контактный номер');
+        return;
+    }
+    sendOrderNotification(contactInfo);
     alert('Ваш заказ принят! Мы свяжемся с вами для подтверждения.');
     document.getElementById('cart-items').innerHTML = '';
+    document.getElementById('contact-info').value = '';
 }
 
 Telegram.WebApp.ready();
