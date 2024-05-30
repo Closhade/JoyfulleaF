@@ -1,6 +1,8 @@
 const botToken = '7466941934:AAHmFBQ-JijsQ6xhpqdZEWdeJJf8SihzQKw'; // токен вашего бота для уведомлений
 const chatId = '431419402'; // ваш Telegram user ID
 
+Telegram.WebApp.ready();
+
 function addToCart(item) {
     const cartItems = document.getElementById('cart-items');
     const itemElement = document.createElement('p');
@@ -52,4 +54,9 @@ function checkout() {
     document.getElementById('contact-info').value = '';
 }
 
-Telegram.WebApp.ready();
+window.onload = function() {
+    const user = Telegram.WebApp.initDataUnsafe.user;
+    if (user && user.username) {
+        document.getElementById('contact-info').value = user.username;
+    }
+};
