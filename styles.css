@@ -59,7 +59,7 @@ section {
 }
 
 .product, .wishlist-item {
-    background-color: #ffffff; /* Белый цвет для карточек товаров */
+    background-color: #fff; /* Белый цвет для карточек товаров */
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
@@ -67,6 +67,11 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     position: relative;
+    transition: transform 0.3s;
+}
+
+.product:hover, .wishlist-item:hover {
+    transform: translateY(-10px);
 }
 
 .product img, .wishlist-item img {
