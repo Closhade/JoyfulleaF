@@ -19,7 +19,7 @@
             <input type="text" id="contact-info" class="contact-input" placeholder="Введите ваш контактный номер">
         </div>
         <h2 class="section-title">ВСЁ ДЛЯ МИНИ-СТРОЙКИ</h2>
-        <section id="products">
+        <section id="products" class="product-grid">
             <div class="product" data-title="Товар 1" data-description="Полное описание товара 1" data-image="https://via.placeholder.com/300" data-price="100 руб.">
                 <img src="https://via.placeholder.com/150" alt="Product Image">
                 <h3>Товар 1</h3>
@@ -100,7 +100,7 @@
         </section>
         <section id="wishlist">
             <h2>Желаемое</h2>
-            <div id="wishlist-items"></div>
+            <div id="wishlist-items" class="product-grid"></div>
         </section>
     </main>
     <!-- Модальное окно для отображения подробной информации о товаре -->
@@ -111,7 +111,7 @@
             <h3 id="product-modal-title"></h3>
             <p id="product-modal-description"></p>
             <p id="product-modal-price"></p>
-            <button id="product-modal-wishlist" class="wishlist-button">&#9825;</button> <!-- кнопка добавления в желаемое -->
+            <button id="product-modal-wishlist" class="wishlist-button">&#9825;</button>
         </div>
     </div>
     <script src="script.js"></script>
