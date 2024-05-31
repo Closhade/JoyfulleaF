@@ -81,6 +81,7 @@ function addToWishlist(title, description, imageUrl, price) {
         <img src="${imageUrl}" alt="${title}">
         <h3>${title}</h3>
         <p>${price}</p>
+        <button onclick="addToCart('${title}', '${price}', event)">Добавить в корзину</button>
     `;
 
     itemElement.onclick = function() {
