@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #2c2f33; /* Темный фон */
     margin: 0;
     padding: 0;
 }
@@ -45,6 +45,7 @@ main {
     font-weight: 700;
     margin-bottom: 30px;
     font-size: 24px;
+    color: white; /* Белый цвет для заголовка */
 }
 
 section {
@@ -53,15 +54,15 @@ section {
 
 #products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .product, .wishlist-item {
-    background-color: white;
+    background-color: #ffffff; /* Белый цвет для карточек товаров */
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -72,25 +73,25 @@ section {
     max-width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .product h3, .wishlist-item h3 {
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px 0;
 }
 
 .product p, .wishlist-item p {
-    font-size: 14px;
+    font-size: 16px;
     color: #28a745;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -104,11 +105,11 @@ button:hover {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 15px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     transition: background-color 0.3s;
 }
 
@@ -117,7 +118,7 @@ button:hover {
 }
 
 #cart-items, #wishlist-items {
-    background-color: white;
+    background-color: #ffffff; /* Белый цвет для корзины и желаемого */
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
